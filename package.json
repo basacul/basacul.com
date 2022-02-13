@@ -1,0 +1,29 @@
+{
+  "name": "basacul_website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"dev": "nodemon app -e js, hbs"  
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/basacul/basacul.com.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/basacul/basacul.com/issues"
+  },
+  "homepage": "https://github.com/basacul/basacul.com#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "hbs": "^4.2.0",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
