@@ -103,8 +103,8 @@ app.get('*', (req, res) => {
 	});
 });
 
-const port = 3000;
-const url = 'https://basacul.run-eu-central1.goorm.io';
-app.listen(port, () => {
+const localPort = 3000;
+
+app.listen(process.env.PORT || localPort, () => {
 	console.log(`Listening on port ${port} at ${url}`);
 });
