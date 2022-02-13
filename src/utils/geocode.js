@@ -5,7 +5,6 @@ const geocode = (address, callback) => {
 	const url = `${urlMapbox}${encodeURIComponent(address)}.json?access_token=${token}&limit=1`;
 
 	request({url, json: true}, (error, { body } ) => {
-
 		if(error){
 			callback('Unable to connect to locations services.', undefined);
 		}else if(body.features.length === 0){

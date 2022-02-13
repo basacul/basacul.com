@@ -106,5 +106,5 @@ app.get('*', (req, res) => {
 const localPort = 3000;
 
 app.listen(process.env.PORT || localPort, () => {
-	console.log(`Listening on port ${port} at ${url}`);
+	console.log("Running...");
 });
