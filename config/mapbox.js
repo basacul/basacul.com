@@ -3,5 +3,5 @@ const token = "";
 
 module.exports = {
 	urlMapbox: url,
-	token: token
+	token: process.env.MAPBOX_TOKEN || token
 };

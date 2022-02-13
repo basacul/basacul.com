@@ -1,9 +1,9 @@
 const request = require('request');
-const { urlWeatherstack} = require('../../config/weatherstack');
+const { urlWeatherstack, token } = require('../../config/weatherstack');
 
 const forecast = ({ location, latitude, longitude}, callback) => {
 
-	const url = `${urlWeatherstack}${latitude},${longitude}&units=m`;
+	const url = `${urlWeatherstack}${token}&query=${latitude},${longitude}&units=m`;
 
 	request({url, json: true}, (error, { body} ) => {
 		if(error){

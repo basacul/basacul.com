@@ -1,7 +1,7 @@
+const url = "http://api.weatherstack.com/current?access_key=";
 const token = "";
-const url = `http://api.weatherstack.com/current?access_key=${token}&query=`;
 
 module.exports = {
 	urlWeatherstack: url,
-	token: token
+	token: process.env.WEATHERSTACK_TOKEN || token
 };
