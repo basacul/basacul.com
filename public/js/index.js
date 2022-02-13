@@ -15,7 +15,11 @@ weatherForm.addEventListener('submit', (e) => {
 	messageTwo.textContent = '';
 	
 	const location = search.value;
-	const url = `https://basacul.run-eu-central1.goorm.io/weather?address=${location}`; 
+	// on goorm when developing
+	// const url = `https://basacul.run-eu-central1.goorm.io/weather?address=${location}`; 
+	
+	// on heroku when in production
+	const url = `/weather?address=${location}`; 
 	
 	fetch(url).then((response) => {
 		
