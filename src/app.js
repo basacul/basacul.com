@@ -25,22 +25,22 @@ app.use(express.static(publicDirectoryPath));
 	// renders views/index.hbs
 	res.render('index', {
 		title: 'Weather',
-		name: 'Basacul'
+		name: 'basacul'
 	});	
 });
 
 app.get('/help', (req, res) => {
 	res.render('help', {
 		title: 'Help',
-		name: 'Basacul',
-		message: "On ths site you won't find much help, yet."
+		name: 'basacul',
+		message: "On this site you won't find much help, yet."
 	});
 });
 
 app.get('/about', (req, res) => {
 	res.render('about', {
 		title: 'About Me',
-		name: 'Basacul' 
+		name: 'basacul' 
 	});	
 });
 
@@ -59,13 +59,27 @@ app.get('/weather', (req, res) => {
 			return res.send({ error });
 		}
 		
-		forecast(data, (error, response) => {
+		forecast(data, (error, {name, 
+								country, 
+								weather_description, 
+								temperature, 
+								feelslike, 
+								humidity, 
+								precip, 
+								wind_speed }) => {
 			if(error){
 				return res.send({ error	});
 			}
 			
 			res.send({
-				forecast: response,
+				name,
+				country,
+				weather_description,
+				temperature,
+				feelslike,
+				humidity,
+				precip,
+				wind_speed,
 				location: data.location, 
 				address: req.query.address
 			});
@@ -90,7 +104,7 @@ app.get('/products', (req, res) => {
 app.get('/help/*', (req, res) => {
 	res.render('404', {
 		title: 'Help',
-		name: 'Basacul',
+		name: 'basacul',
 		message: "Help article not found."
 	});
 });
@@ -98,7 +112,7 @@ app.get('/help/*', (req, res) => {
 app.get('*', (req, res) => {
 	res.render('404', {
 		title: '404',
-		name: 'Basacul',
+		name: 'basacul',
 		message: "Page not found"
 	});
 });
