@@ -1,12 +1,13 @@
+
 body {
 	color: #333333;
 	font-family: arial;
-	/*max-width: 650px;*/
+	max-width: max-content;
 	margin: 0 auto;
 	padding: 0 16px;
-	
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	min-height: 100vh; 
 }
 

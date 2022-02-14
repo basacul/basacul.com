@@ -25,14 +25,14 @@ app.use(express.static(publicDirectoryPath));
 	// renders views/index.hbs
 	res.render('index', {
 		title: 'Weather',
-		name: 'Geisha'
+		name: 'Basacul'
 	});	
 });
 
 app.get('/help', (req, res) => {
 	res.render('help', {
 		title: 'Help',
-		name: 'Geisha',
+		name: 'Basacul',
 		message: "On ths site you won't find much help, yet."
 	});
 });
@@ -40,7 +40,7 @@ app.get('/help', (req, res) => {
 app.get('/about', (req, res) => {
 	res.render('about', {
 		title: 'About Me',
-		name: 'Geisha' 
+		name: 'Basacul' 
 	});	
 });
 
@@ -90,7 +90,7 @@ app.get('/products', (req, res) => {
 app.get('/help/*', (req, res) => {
 	res.render('404', {
 		title: 'Help',
-		name: 'Geisha',
+		name: 'Basacul',
 		message: "Help article not found."
 	});
 });
@@ -98,7 +98,7 @@ app.get('/help/*', (req, res) => {
 app.get('*', (req, res) => {
 	res.render('404', {
 		title: '404',
-		name: 'Andrew',
+		name: 'Basacul',
 		message: "Page not found"
 	});
 });
